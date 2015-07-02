@@ -4,42 +4,48 @@ namespace Sample
 {
     public class SampleConfiguration : IRocketPluginConfiguration
     {
+        public bool suicidemsg;
+        public bool warningmsg;
+        public string warning1;
+        public string warning2;
         public string zombie;
-        public string shot;
+        public string gun;
         public string melee;
         public string melee2;
         public string punch;
         public string punch2;
-        public string roadkilling;
-        public string explosion;
-        public string hunger;
-        public string dehydration;
+        public string roadkill;
+        public string vehicle;
+        public string food;
+        public string water;
         public string infection;
         public string bleeding;
+        public string suicide;
 
 
         public IRocketPluginConfiguration DefaultConfiguration
         {
             get
             {
-                return new SampleConfiguration()
+                return new DeathMessagesConfig1()
                 {
-                    zombie = "has been eaten alive by a zombie!",
-                    shot = "shot and killed",
-                    melee = "melee'd",
+                    suicidemsg = true,
+                    warningmsg = true,
+                    warning1 = "WARNING: You are about to die!",
+                    warning2 = "We recommend you to patch yourself up!",
+                    zombie = "has been mauled by a zombie!",
+                    gun = "shot and killed",
+                    melee = "has melee'd",
                     melee2 = "to death!",
-                    punch = "has punched" ,
+                    punch = "has punched",
                     punch2 = "to death!",
-                    roadkilling = "ran over",
-                    explosion = "died due to an explosion!",
-                    hunger = "has starved to death!",
-                    dehydration = "dehydrated to death!",
-                    infection = "became a zombie himself!",
+                    roadkill = "ran over",
+                    vehicle = "has died due to an explosion of a vehicle!",
+                    food = "has starved to death!",
+                    water = "has dehydrated to death!",
+                    infection = "has become a zombie himself!",
                     bleeding = "has bled to death!",
-
-
-
-
+                    suicide = "has killed himself!",
 
                 };
             }
